@@ -1,0 +1,53 @@
+.example-Container {
+
+    height: 100vh;
+    
+}
+
+.menu-icon {
+
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.sidenav {
+
+    width: 300px;
+
+}
+
+.logo {
+
+    border-bottom: 1px solid lightgray;
+    padding: 16px;
+    
+
+}
+
+.list-menu {
+
+    list-style: none;
+    padding-left: 0;
+
+    li {
+
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+}
+
+   
+.list-menu li:hover {
+
+    background-color: rgba(0,0,0,0.3);
+}
+
+.mat-toolbar-row, .mat-toolbar-row {
+
+    background-color: azure;
+}
