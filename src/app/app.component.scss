@@ -18,7 +18,13 @@
 
 .logo {
 
-    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content:center;
+}
+.logo img {
+
+   height: 45px;
+   width: 130px;
     padding: 16px;
     
 
@@ -56,5 +62,6 @@
 
     padding-left: 56px;
     padding-top: 16px;
+    padding-right: 56px;
 
 }
