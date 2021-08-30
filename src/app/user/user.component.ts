@@ -3,7 +3,8 @@ import {MatDialog} from '@angular/material/dialog';
 import { User } from 'src/models/user.class';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { ThisReceiver } from '@angular/compiler';
+
+
 
 @Component({
   selector: 'app-user',
@@ -23,7 +24,7 @@ export class UserComponent implements OnInit {
       .collection('users')
       .valueChanges()
       .subscribe((changes: any) => {
-        console.log('Received all Users changes from DB', changes);
+        console.log('Received changes from DB', changes);
         this.allUsers = changes;
         
       });
