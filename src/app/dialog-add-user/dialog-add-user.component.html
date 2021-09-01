@@ -6,21 +6,30 @@
 <div class="name-field">
     <mat-form-field class="mr-16" appearance="fill">
         <mat-label>First Name</mat-label>
-        <input [disabled]="loading" [(ngModel)]="user.firstName" matInput placeholder="Placeholder">
+        <input [disabled]="loading" [(ngModel)]="user.firstName" matInput>
       </mat-form-field>
   
       <mat-form-field appearance="fill">
         <mat-label>Last Name</mat-label>
-        <input [disabled]="loading"  [(ngModel)]="user.lastName" matInput placeholder="Placeholder"> 
+        <input [disabled]="loading"  [(ngModel)]="user.lastName" matInput> 
       </mat-form-field>
  
+</div>
+
+<div class="mail-field">
+<mat-form-field class="full-width" appearance="fill">
+  <mat-label>E-Mail</mat-label>
+  <input [disabled]="loading"  [(ngModel)]="user.email" matInput> 
+
+</mat-form-field>
+
 </div>
 
 <div class="datepicker">
 
     <mat-form-field class="full-width" appearance="fill">
         <mat-label>Birthdate</mat-label>
-        <input [disabled]="loading"  [(ngModel)]="user.birthDate" matInput placeholder="Placeholder" [matDatepicker]="picker">
+        <input [disabled]="loading"  [(ngModel)]="user.birthDate" matInput  [matDatepicker]="picker">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
@@ -31,7 +40,7 @@
 
     <mat-form-field class="full-width"  appearance="fill">
         <mat-label>Adress</mat-label>
-        <input [disabled]="loading"  [(ngModel)]="user.street" matInput placeholder="Placeholder"> 
+        <input [disabled]="loading"  [(ngModel)]="user.street" matInput> 
       </mat-form-field>
 
 </div>
@@ -40,16 +49,16 @@
 
     <mat-form-field class="mr-16" appearance="fill">
         <mat-label>Zip</mat-label>
-        <input [disabled]="loading"  [(ngModel)]="user.zipCode" matInput placeholder="Placeholder"> 
+        <input [disabled]="loading"  [(ngModel)]="user.zipCode" matInput> 
       </mat-form-field>
       
       <mat-form-field appearance="fill">
         <mat-label>City</mat-label>
-        <input [disabled]="loading"  [(ngModel)]="user.city" matInput placeholder="Placeholder"> 
+        <input [disabled]="loading"  [(ngModel)]="user.city" matInput> 
       </mat-form-field>
 </div>
 
 <div mat-dialog-actions>
-  <button [disabled]="loading"  mat-button>Cancel</button>
+  <button [disabled]="loading"  mat-button (click)="dialogRef.close()">Cancel</button>
   <button [disabled]="loading"  mat-button (click)="saveUser()"  cdkFocusInitial>Save</button>
 </div>

@@ -2,3 +2,16 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.progress-bar {
+
+    position: relative;
+}
+.mat-progress-bar {
+
+    position: absolute;
+    left: -24px;
+    right: -24px;
+    top: -24px;
+    width: calc(100% + 48px);
+}
